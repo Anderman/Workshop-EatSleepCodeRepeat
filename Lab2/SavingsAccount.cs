@@ -18,6 +18,11 @@ namespace eu.sig.training.ch04.v1
             {
                 sum = sum + (9 - i) * (int)Char.GetNumericValue(counterAccount[i]);
             }
+            return IsRegisteredAccount(counterAccount, amount, sum);
+        }
+
+        private Transfer IsRegisteredAccount(string counterAccount, Money amount, int sum)
+        {
             if (sum % 11 == 0)
             {
                 // 2. Look up counter account and make transfer object:
